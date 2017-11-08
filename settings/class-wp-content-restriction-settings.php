@@ -338,7 +338,7 @@ class WP_Content_Restriction_Settings {
     public static function update_or_create_post_meta( $post_id ) {
         
         // Save POST value to $value_to_save
-        $value_to_save = $_POST['wpcr-enable-restriction'];
+        $value_to_save = isset($_POST['wpcr-enable-restriction'])?$_POST['wpcr-enable-restriction']:'';
         
         // Check post value, if has value, update post meta
         if( 1 == $value_to_save ) {
